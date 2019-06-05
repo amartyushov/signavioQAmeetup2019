@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 import io.mart.model.Teacher;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +37,11 @@ public class TeacherController {
 	@GetMapping(path = "/teacher")
 	public @ResponseBody List<Teacher> getAll() {
 		return new ArrayList<>(teachers.values());
+	}
+	
+	@DeleteMapping(path = "/teacher/{id}")
+	public void delete(@PathVariable Integer id) {
+		teachers.remove(id);
 	}
 	
 }
