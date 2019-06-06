@@ -17,11 +17,11 @@ public class CustomProvider implements WebDriverProvider {
 		capabilities.setCapability("enableVNC", true);
 		capabilities.setCapability("name", "myCoolTestName");    // session have this name on UI
 		
-		FirefoxOptions firefoxOptions = new FirefoxOptions();
-		firefoxOptions.setAcceptInsecureCerts(true);
-		firefoxOptions.merge(capabilities);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setAcceptInsecureCerts(true);
+		chromeOptions.merge(capabilities);
 		try {
-			return new RemoteWebDriver(new URL("http://172.16.11.19:4446/wd/hub"), firefoxOptions);
+			return new RemoteWebDriver(new URL("http://172.16.11.19:4446/wd/hub"), chromeOptions);
 		} catch (final MalformedURLException e) {
 			throw new RuntimeException("Unable to create driver", e);
 		}
