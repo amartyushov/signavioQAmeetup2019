@@ -9,3 +9,6 @@ This is a source code for the meetup in Signavio
 
 ## How to start System Under Test for backend testing
 `cd app; gradle bootRun`
+
+## Slides for the presentation 
+Pleas find a file [Slides](meetupSlides.pdf)
