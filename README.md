@@ -11,4 +11,4 @@ This is a source code for the meetup in Signavio
 `cd app; gradle bootRun`
 
 ## Slides for the presentation 
-Pleas find a file [Slides](meetupSlides.pdf)
+Please find a file [Slides](meetupSlides.pdf)
