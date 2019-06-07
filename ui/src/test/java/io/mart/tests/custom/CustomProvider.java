@@ -20,10 +20,11 @@ public class CustomProvider implements WebDriverProvider {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setAcceptInsecureCerts(true);
 		chromeOptions.merge(capabilities);
+		String remoteSelenoidURL = "http://SELENOID_HOST:SELENOID_PORT/wd/hub"; // please add yourself
 		try {
-			return new RemoteWebDriver(new URL("http://172.16.11.19:4446/wd/hub"), chromeOptions);
+			return new RemoteWebDriver(new URL(remoteSelenoidURL), chromeOptions);
 		} catch (final MalformedURLException e) {
-			throw new RuntimeException("Unable to create driver", e);
+			throw new RuntimeException("Unable to create driver in " + remoteSelenoidURL, e);
 		}
 	}
 }
