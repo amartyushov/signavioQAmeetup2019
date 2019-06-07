@@ -6,3 +6,6 @@ This is a source code for the meetup in Signavio
 
 ## How to start ui tests using gradle   
 `gradle ui:test; gradle ui:allureReport ui:allureServe`
+
+## How to start System Under Test for backend testing
+`cd app; gradle bootRun`
